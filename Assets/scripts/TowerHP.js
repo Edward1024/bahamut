@@ -3,10 +3,10 @@ import UnityEngine.UI;
 var hp : int = 100;
 
 function Update () {
-	GameObject.Find("EnemyTowerHP").GetComponent(Text).text = hp.ToString();
+	GetComponent(Text).text = hp.ToString();
 }
 
-function UI_LostHP (amount : int){
+function LostHP (amount : int){
 	if(hp - amount >=0) {
 		hp -= amount;
 	}
