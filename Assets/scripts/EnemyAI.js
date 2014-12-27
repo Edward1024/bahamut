@@ -11,6 +11,9 @@ function Start () {
 		yield WaitForSeconds(3);
 		
 	SpawnMonster(1, 3, 10, .2);
+		yield WaitForSeconds(3);
+		
+	SpawnMonster(1, 3, 15, .1);
 }
 function SpawnMonster (startIndex : int, endIndex : int, amt : int, wait : float ) {
 	for(var i=0;i<amt;i++){
