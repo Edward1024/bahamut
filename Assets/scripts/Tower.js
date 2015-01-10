@@ -1,8 +1,12 @@
 ﻿#pragma strict
 
-var hp_ui : GameObject;
+var hp : int = 500 ;
 
-function LostHP (amount : int) {
-	hp_ui.SendMessage("LostHP",amount);
+function Damage (atk : int) {
+	hp -= atk;
+	}
+	
+	function Update () {
+		if(hp <= 0)Destroy(gameObject);
 		
 }
