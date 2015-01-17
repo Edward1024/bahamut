@@ -11,6 +11,9 @@ function Start () {
 function Update () {
 	nowHP = GetComponentInParent(Monster).hp;
 	var rate : float = nowHP / maxHP;
+	if (rate <= 0){
+	rate=0;
+	}
 	if(rate < 0.3){
 		GetComponent(SpriteRenderer).color = Color.red;
 		}
